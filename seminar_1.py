@@ -38,13 +38,13 @@ if (12 < m ) or (m < 1):
     print("error")
 else:
     if m == 2:
-        print (365 - (31 + day))
+        print (366 - (31 + day))
     elif (m == 1):
-        print(365 - day)
+        print(366 - day)
     elif 2 < m <= 7:
-        print((30 + m%2)*(m//2) + 30 * (m//2-1) + 28 + day)
+        print(366 -((m-2)*30 + m//2  + 28 + day))
     else: 
-        print(31 - m%2 )
+        print(366 - ((m-2)*30 + (m+1)//2 + 28 + day))
 
 
 
