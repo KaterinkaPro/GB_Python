@@ -22,11 +22,12 @@
 
 # вариант_1
 
-# num = list(map(int, (input())))
+# num = input()
 # if len(num) != 6:
 #     print("Ошибка")
 # else:
-#     if sum(num[:3]) == sum(num[3:]):
+#     list_num = [int(i) for i in num]
+#     if sum(list_num[:3]) == sum(list_num[3:]):
 #         print("Счастливый")
 #     else:
 #         print("Неудача!")
@@ -54,8 +55,8 @@
 # Требуется определить, можно ли от шоколадки размером n × m долек отломить k долек, если разрешается сделать один разлом по прямой между дольками
 # (то есть разломить шоколадку на два прямоугольника).
 
-n, m, k = int(input()), int(input()), int(input())
-if (k%n == 0 or k %m == 0) and k <= n*m:
-    print ("YES")
-else:
-    print("NO")
+# n, m, k = int(input()), int(input()), int(input())
+# if (k%n == 0 or k %m == 0) and k <= n*m:
+#     print ("YES")
+# else:
+#     print("NO")
