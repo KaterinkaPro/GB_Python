@@ -1,1 +1,1 @@
-spisok.sort(reverse=True)
+ if i in k

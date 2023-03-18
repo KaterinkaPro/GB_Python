@@ -11,7 +11,7 @@ print(len(list))
 list_1 = [int(input()) for item in range(n)]
 k = int(input("Введите число на которое требуется сдвинуть последовательность"))
 for i in range(k):
-    list_1.append(list_1.pop(0))
+    list_1.insert(0, list_1.pop(-1))
 print(list_1) """
 
 # Напишите программу для печати всех уникальных значений в словаре
@@ -19,7 +19,7 @@ print(list_1) """
 """ dictionary = [{"V": "S001"}, {"V": "S002"}, {"VI": "S001"}, {"VI": "S005"}, {"VII": " S005 "}, {" V ":" S009 "},  {" VIII ":" S007 "}]
 list = []
 for i in range(len(dictionary)):
-    list += dictionary[i].values()
+    list += dictionary[i].values().strip
 print(set(list)) """
 
 # Дан массив, состоящий из целых чисел. Напишите программу, которая подсчитает количество элементов массива, больших предыдущего 
