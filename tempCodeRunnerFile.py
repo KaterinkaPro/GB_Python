@@ -1,1 +1,1 @@
- if i in k
+word = word.upper()

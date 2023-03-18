@@ -62,8 +62,7 @@ rus = {'АВЕИНОРСТ': 1,
              'ЖЗХЦЧ': 5,
              'ШЭЮ': 8,
              'ФЩЪ': 10}
-word = input("Напишите свое слово: ")
-word = word.upper()
+word = input("Напишите свое слово: ").upper()
 if 65 <= ord(word[0]) <= 90:
     print(sum(v for i in word for k, v in eng.items() if i in k))
 elif 1040 <= ord(word[0]) <= 1071:
