@@ -51,6 +51,24 @@ set_text = set(str_2)
 print(set_text)
 print(f'{len(set_text)}') """
 
+
+""" a =  "She sells sea shells on the sea shore;The shells that she sells are sea shells I'm sure.So if she sells sea shells on the sea shore,I'm sure that the shells are sea shore shells."
+
+# for znak in [".", "!", "?", ";", ":", ","]:
+#     a = a.replace(znak, " ")
+# print(a)  
+
+res = set()
+cur_wrd = ""
+for letter in a:
+    if letter not in ".,? !:;":
+        cur_wrd += letter
+    else:
+        res.add(cur_wrd)
+        cur_wrd = ""
+print(res)
+print(len(res)) """
+
 # “Задана последовательность неотрицательных целых чисел. Требуется определить значение наибольшего элемента
 # последовательности, которая завершается первым встретившимся нулем (число 0 не входит в последовательность)”.
 
@@ -66,18 +84,3 @@ print(f'{max_ = }') """
 
 
 
-a =  "She sells sea shells on the sea shore;The shells that she sells are sea shells I'm sure.So if she sells sea shells on the sea shore,I'm sure that the shells are sea shore shells."
-
-""" for znak in [".", "!", "?", ";", ":", ","]:
-    a = a.replace(znak, " ")
-print(a)  """   
-res = set()
-cur_wrd = ""
-for letter in a:
-    if letter not in ".,? !:;":
-        cur_wrd += letter
-    else:
-        res.add(cur_wrd)
-        cur_wrd = ""
-print(res)
-print(len(res))
