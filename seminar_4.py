@@ -45,24 +45,11 @@ print(new_str) """
 
 # Пользователь вводит текст(строка). Словом считается последовательность непробельных символов идущих подряд, слова разделены одним или большим числом пробелов. 
 # Определите, сколько различных слов содержится в этом тексте.
-str = "She sells sea shells on the sea shore The shells that she sells are sea shells I'm sure.So if she sells sea shells on the sea shore I'm sure that the shells are sea shore shells".lower()
+""" str = "She sells sea shells on the sea shore The shells that she sells are sea shells I'm sure.So if she sells sea shells on the sea shore I'm sure that the shells are sea shore shells".lower()
 str_2 = str.replace('.', ' ').split()
-
-# text = [i.upper() for i in str]
 set_text = set(str_2)
-print(len(set_text))
-
-print()
-
-text_ = text_.replace(".", " ").split()
-print(text_)
-
-text_ = [i.upper() for i in text_]
-
-set_text = set(text_)
-
 print(set_text)
-print(f'{len(set_text)}')
+print(f'{len(set_text)}') """
 
 # “Задана последовательность неотрицательных целых чисел. Требуется определить значение наибольшего элемента
 # последовательности, которая завершается первым встретившимся нулем (число 0 не входит в последовательность)”.
@@ -78,14 +65,19 @@ while number_ != 0:
 print(f'{max_ = }') """
 
 
-Пользователь вводит текст(строка). Словом считается 
-последовательность непробельных символов идущих 
-подряд, слова разделены одним или большим числом 
-пробелов или символами конца строки.Определите, 
-сколько различных слов содержится в этом тексте.
-Input: She sells sea shells on the sea shore;The shells
-that she sells are sea shells I'm sure.So if she sells sea
-shells on the sea shore,I'm sure that the shells are sea
-shore shells.
-Output: 19
-for znak in [".", "!", ""]
+
+a =  "She sells sea shells on the sea shore;The shells that she sells are sea shells I'm sure.So if she sells sea shells on the sea shore,I'm sure that the shells are sea shore shells."
+
+""" for znak in [".", "!", "?", ";", ":", ","]:
+    a = a.replace(znak, " ")
+print(a)  """   
+res = set()
+cur_wrd = ""
+for letter in a:
+    if letter not in ".,? !:;":
+        cur_wrd += letter
+    else:
+        res.add(cur_wrd)
+        cur_wrd = ""
+print(res)
+print(len(res))
