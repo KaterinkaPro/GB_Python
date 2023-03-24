@@ -2,15 +2,17 @@
 # Пользователь вводит 2 числа. n - кол-во элементов первого множества. m - кол-во элементов второго множества. Затем пользователь вводит сами элементы множеств.
 
 """ N1, N2 = int(input()), int(input())
+# s1 = [2, 4, 6, 8, 10, 12, 10, 8, 6, 4, 2]
+# s2 = [3, 6, 9, 12, 15, 18]
 s1 = (int(input()) for i in range(N1))
 s2 = (int(input()) for i in range(N2))
 s1 = set(s1)
 s2 = set(s2)
 print(s1)
 print(s2)
-s3 = s1.union(s2)
+s3 = s1.intersection(s2)
 res = sorted(s3)
-print(res) """
+print(res) """ 
 
 
 
