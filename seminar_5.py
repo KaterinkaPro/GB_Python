@@ -12,25 +12,27 @@ print(fib(n))
 
 # Хакер Василий получил доступ к классному журналу и хочет заменить все свои минимальные оценки на 
 # # максимальные. Напишите программу, которая заменяет оценки Василия, но наоборот: все максимальные – на минимальные.
-Проверить встроенныее функции листа мин и макс
 
-""" def change(arg):
-    min = arg[0]
-    max = arg[0]
-    for i in arg:
-        if i < min:
-            min = i
-        elif i > max:
-            max = i
+
+def change(arg):
+    a = min(arg)
+    b = max(arg)
+    # min = arg[0]
+    # max = arg[0]
+    # for i in arg:
+    #     if i < min:
+    #         min = i
+    #     elif i > max:
+    #         max = i
     for i in range(len(arg)):
-        if arg[i]==max:
-            arg[i] = min
+        if arg[i]==b:
+            arg[i] = a
     return arg
 
 n = int(input("Введите количество элементов:"))
 arg = [int(input()) for i in range(n)]
 print(arg)
-print(change(arg)) """
+print(change(arg))
 
 # Напишите функцию, которая принимает одно число и проверяет, является ли оно простым # Напоминание: Простое число - это число, которое имеет 2 делителя: 1 и n(само число) 
 
