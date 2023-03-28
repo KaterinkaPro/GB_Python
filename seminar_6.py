@@ -57,13 +57,13 @@ def sum(n):
         sum = 0
         for j in range(1,i-1):
             if i % j ==0:
-                sum +=j
-        list.append([i,sum])
-    for i in range(len(list)):
-        for j in range(i+1, len(list)):
-            if list[i][0] == list[j][1] and list[j][0] == list[i][1] :
-                l.append([i, j])
-    return l    
+#                 sum +=j
+#         list.append([i,sum])
+#     for i in range(len(list)):
+#         for j in range(i+1, len(list)):
+#             if list[i][0] == list[j][1] and list[j][0] == list[i][1] :
+#                 l.append([i, j])
+#     return l    
     
 
-print(sum(k))
+# print(sum(k))
