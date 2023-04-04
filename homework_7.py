@@ -9,14 +9,14 @@
 # Ввод: Вывод:
 # пара-ра-рам рам-пам-папам па-ра-па-дам Парам пам-пам
 
-song = input().strip().lower().split( )
-t = []
-for word in song:
-    t.append(len([x for x in word if x in "уеыаоэяиюё"]))
-if len(set(t)) == 1:
-    print("Парам пам-пам")
-else:
-    print("Пам парам")
+# song = input().strip().lower().split( )
+# t = []
+# for word in song:
+#     t.append(len([x for x in word if x in "уеыаоэяиюё"]))
+# if len(set(t)) == 1:
+#     print("Парам пам-пам")
+# else:
+#     print("Пам парам")
 
 # вариант2
 # f = lambda x: sum(1 for i in x if i in 'уеыаоэяиюё')
@@ -34,13 +34,33 @@ else:
 # почему не с нуля). Примечание: бинарной операцией называется любая операция, у которой
 # ровно два аргумента, как, например, у операции умножения.
 
-# def print_operation_table(operation, row, column):
-#     for i in range(1, row + 1):
-#         print(end = '\n')
-#         for j in range(1, column+1):
-#             print(f'\t{operation(i,j)}', end = '')
+def print_operation_table(operation, row, column):
+    for i in range(1, row + 1):
+        print(end = '\n')
+        for j in range(1, column+1):
+            if i != 1 and j != 1:
+                print(f'\t{operation(i,j)}', end = '')
+            elif i == 1:
+                print(f'\t{j}', end = '')
+            else:
+                print(i, end = '\t')
     
-# row, column = (int(i) for i in input().split())
-# print_operation_table(lambda row, column: row * column, row, column)
+row, column = (int(i) for i in input().split())
+print_operation_table(lambda row, column: row / column, row, column)
+
+""" def show_table(table: list[list[int]]) -> None:
+    '''Просто красиво печает матрицу)'''
+    print('\n'.join('\t'.join(map(str, row)) for row in table))
 
 
+def print_operation_table(oper: callable,
+                          num_columns: int = 4,
+                          num_rows: int = 4) -> None:
+    '''Выводит таблицу для чисел с заданной оперцией oper,
+    числом столбцов num_columns и строк num_rows'''
+    table = [list(range(i, i+num_columns)) for i in range(1, num_rows+1)]
+    # show_table(table)
+    for i in range(1, len(table)):
+        for j in range(1, len(table[i])):
+            table[i][j] = oper(table[i][0], table[0][j])
+    show_table(table) """
