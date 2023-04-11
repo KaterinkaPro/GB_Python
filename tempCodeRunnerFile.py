@@ -1,1 +1,2 @@
-f = lambda x: sum(1 for i in x if i in 'уеыаоэяиюё')
+    # def __cmp__(self, other):
+    #     return self > other
